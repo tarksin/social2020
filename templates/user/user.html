@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+        <div class="col-md-12 text-center">
+
+            <h3>Users</h3>
+
+            {% if users %}
+            <dl>
+{% for user in users %}
+            <dt class="username"> {{ user.first_name}} {{ user.last_name}} ({{ user.user_id}})</dt>
+    <dd>{{ user.email }}</dd>
+{% endfor %}
+                </dl>
+{% else %}
+            <h3>No users found</h3>
+            {% endif %}
+    </div>
+ </div>
+ {% endblock %}

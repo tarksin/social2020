@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>White History Week</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f2c96ee81.js" crossorigin="anonymous"></script>
+       <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+    {% block header %}{% endblock %}
+
+  </head>
+  <body>
+
+    <div class="container">
+         <a  href="{{ url_for('home_app.home') }}">
+                <img src="{{ url_for('static', filename='images/mountains.jpeg')}}"  height="125" width="500" alt="whw logo">
+            </a>
+            <h1 class='headcap'  style="font-family: 'Economica', sans-serif;">
+                <img src="{{ url_for('static', filename='assets/spacer.svg')}}"  height="15" width="15" alt="spacer">
+                White History Week
+            </h1>
+
+
+
+
+    {% block content %}
+
+
+    {% endblock %}
+      <div class="col-md-offset-3 col-md-6">
+        <hr />
+        <footer>
+          &copy; copyright 2020 White History Week
+        </footer>
+      </div>
+
+    </div>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {% block end_body_js %}{% endblock %}
+
+  </body>
+</html>

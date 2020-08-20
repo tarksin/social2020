@@ -1,0 +1,6 @@
+{% block body%}{% endblock%}
+
+
+---
+White History Week
+{{ config.HOSTNAME }}

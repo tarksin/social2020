@@ -1,0 +1,7 @@
+{% block body %}
+Hey {{ user.first_name }}, thanks for registering at White History Week.
+
+To confirm your registration, please click on this link:
+{{ config.HOSTNAME }}/confirm/{{ user.username }}/{{ user.change_configuration.confirmation_code }}
+
+{% endblock %}
