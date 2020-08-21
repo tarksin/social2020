@@ -4,6 +4,7 @@ import uuid
 import os
 from werkzeug import secure_filename
 from mongoengine import Q
+from datetime import datetime, date
 
 from user.models import User
 from user.forms import RegisterForm, LoginForm, EditForm, ForgotForm, PasswordResetForm
@@ -319,4 +320,13 @@ def user():
 
 @user_app.route("/calendar")
 def calendar():
-    return render_template("user/calendar.html")
+    days = []
+    day_one = date(2020,7,31)
+    today = date.today()
+    days_in = abs(today-day_one)
+    days_in = days_in.days -1
+    days_to_go = 180 - days_in
+    _class= "got_it"         #default
+    return render_template("user/calendar.html", days_in=days_in,_class=_class)
+
+
